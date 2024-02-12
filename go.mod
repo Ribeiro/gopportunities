@@ -7,6 +7,8 @@ require github.com/arthur404dev/gopportunities v0.0.0-20230320052036-00754b7568a
 require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
+	github.com/mattn/go-sqlite3 v1.14.17 // indirect
+
 )
 
 require (
@@ -49,5 +51,6 @@ require (
 	google.golang.org/protobuf v1.30.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
+	gorm.io/driver/sqlite v1.5.5
 	gorm.io/gorm v1.25.7
 )
