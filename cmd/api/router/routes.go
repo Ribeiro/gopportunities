@@ -16,11 +16,11 @@ func initializeRoutes(router *gin.Engine) {
 	docs.SwaggerInfo.BasePath = basePath
 	v1 := router.Group("/api/v1")
 	{
-		v1.GET(openingsPath, handler.GetAllOpeningsHandler)
-		v1.GET(openingsPath+"/:id", handler.GetOpeningsHandler)
-		v1.POST(openingsPath, handler.CreateOpeningsHandler)
-		v1.DELETE(openingsPath, handler.DeleteOpeningsHandler)
-		v1.PUT(openingsPath, handler.UpdateOpeningsHandler)
+		v1.GET(openingsPath, handler.GetOpeningsHandler)
+		v1.GET(openingsPath+"/:id", handler.GetOpeningHandler)
+		v1.POST(openingsPath, handler.CreateOpeningHandler)
+		v1.DELETE(openingsPath, handler.DeleteOpeningHandler)
+		v1.PUT(openingsPath, handler.UpdateOpeningHandler)
 	}
 
 	// Initialize Swagger
