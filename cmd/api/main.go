@@ -1,19 +1,8 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import "github.com/Ribeiro/gopportunities/cmd/api/router"
 
 func main() {
-	//Initializing Router with gin default config
-	r := gin.Default()
-
-	//Defining route
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
-
-	//Running API server (8080 default port)
-	r.Run(":8080")
-
+	//Initialize Router
+	router.Initialize()
 }
