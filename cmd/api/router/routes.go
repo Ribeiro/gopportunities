@@ -12,6 +12,8 @@ const basePath = "/api/v1"
 const openingsPath = "/openings"
 
 func initializeRoutes(router *gin.Engine) {
+	//Initialize Handler
+	handler.InitializeHandler()
 
 	docs.SwaggerInfo.BasePath = basePath
 	v1 := router.Group("/api/v1")
