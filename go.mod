@@ -2,8 +2,6 @@ module github.com/Ribeiro/gopportunities
 
 go 1.20
 
-require github.com/arthur404dev/gopportunities v0.0.0-20230320052036-00754b7568ae
-
 require (
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
@@ -39,7 +37,7 @@ require (
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
 	github.com/swaggo/files v1.0.1
 	github.com/swaggo/gin-swagger v1.6.0
-	github.com/swaggo/swag v1.8.12 // indirect
+	github.com/swaggo/swag v1.8.12
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.11 // indirect
 	golang.org/x/arch v0.3.0 // indirect

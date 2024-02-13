@@ -18,4 +18,4 @@ docs:
 	@swag init
 clean:
 	@rm -f $(APP_NAME)
-	@rm -rf ./docs
+	@rm -rf cmd/api/docs
