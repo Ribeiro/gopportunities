@@ -4,6 +4,10 @@ import (
 	"fmt"
 )
 
+func errParamIsRequired(name, typ string) error {
+	return fmt.Errorf("param: %s (type: %s) is required", name, typ)
+}
+
 func errValidation(m map[string]string) error {
 	return fmt.Errorf("missing fields are required: %s", fmt.Sprint(m))
 }
@@ -53,12 +57,12 @@ func (r *CreateOpeningRequest) Validate() error {
 
 // UpdateOpening
 type UpdateOpeningRequest struct {
-	Role     string `json:"role"`
-	Company  string `json:"company"`
-	Location string `json:"location"`
-	Remote   *bool  `json:"remote"`
-	Link     string `json:"link"`
-	Salary   int64  `json:"salary"`
+	Role     string  `json:"role"`
+	Company  string  `json:"company"`
+	Location string  `json:"location"`
+	Remote   *bool   `json:"remote"`
+	Link     string  `json:"link"`
+	Salary   float64 `json:"salary"`
 }
 
 func (r *UpdateOpeningRequest) Validate() error {
