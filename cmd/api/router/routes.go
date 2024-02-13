@@ -1,8 +1,9 @@
 package router
 
 import (
+	docs "github.com/Ribeiro/gopportunities/tree/master/docs"
+
 	"github.com/Ribeiro/gopportunities/cmd/api/handler"
-	docs "github.com/Ribeiro/gopportunities/docs"
 	"github.com/gin-gonic/gin"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
