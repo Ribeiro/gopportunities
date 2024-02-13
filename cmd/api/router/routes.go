@@ -22,7 +22,7 @@ func initializeRoutes(router *gin.Engine) {
 		v1.GET(openingsPath+"/:id", handler.GetOpeningHandler)
 		v1.POST(openingsPath, handler.CreateOpeningHandler)
 		v1.DELETE(openingsPath+"/:id", handler.DeleteOpeningHandler)
-		v1.PUT(openingsPath, handler.UpdateOpeningHandler)
+		v1.PUT(openingsPath+"/:id", handler.UpdateOpeningHandler)
 	}
 
 	// Initialize Swagger

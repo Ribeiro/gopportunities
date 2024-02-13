@@ -22,6 +22,12 @@ import (
 // @Failure 500 {object} ErrorResponse
 // @Router /opening [put]
 func UpdateOpeningHandler(ctx *gin.Context) {
+	id := ctx.Param("id")
+	if id == "" {
+		sendError(ctx, http.StatusBadRequest, errParamIsRequired("id", "queryParameter").Error())
+		return
+	}
+
 	request := UpdateOpeningRequest{}
 
 	ctx.BindJSON(&request)
@@ -32,11 +38,6 @@ func UpdateOpeningHandler(ctx *gin.Context) {
 		return
 	}
 
-	id := ctx.Query("id")
-	if id == "" {
-		sendError(ctx, http.StatusBadRequest, errParamIsRequired("id", "queryParameter").Error())
-		return
-	}
 	opening := schemas.Opening{}
 
 	if err := db.First(&opening, id).Error; err != nil {
