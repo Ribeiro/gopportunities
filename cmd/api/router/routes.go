@@ -2,7 +2,7 @@ package router
 
 import (
 	"github.com/Ribeiro/gopportunities/cmd/api/handler"
-	docs "github.com/arthur404dev/gopportunities/docs"
+	docs "github.com/Ribeiro/gopportunities/docs"
 	"github.com/gin-gonic/gin"
 	swaggerfiles "github.com/swaggo/files"
 	ginSwagger "github.com/swaggo/gin-swagger"
